@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Típico</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <input type="checkbox" id="check">
+
+    <label class="hamburger" for="check">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+
+    <section class="branding">
+        <h1 class="logo">Restaurante El Sabor</h1>
+    </section>
+
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</header>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family: Arial, sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    color:#333;
+}
+
+
+.logo{
+    font-family: 'Pacifico', cursive;
+    font-size:45px;
+}
+
+
+h2{
+    font-family: 'Pacifico', cursive;
+}
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:white;
+}
+
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+
+
+#check{
+    display:none;
+}
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+    gap:5px;
+}
+
+.hamburger .line{
+    width:25px;
+    height:3px;
+    background:black;
+}
+
+@media (max-width:768px){
+
+    .hamburger{
+        display:flex;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+    }
+
+    nav ul{
+        flex-direction:column;
+        background:white;
+        padding:10px 0;
+    }
+
+    nav ul li{
+        text-align:center;
+        padding:10px;
+    }
+
+    #check:checked ~ nav{
+        display:block;
+    }
+
+    header{
+        flex-wrap:wrap;
+    }
+}
